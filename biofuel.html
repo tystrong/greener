@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="Ugo, greener, ugogreener, homeowners, solutions, bpa, design team" />
+<meta name="Description" content="We are UGOgreener; a supplier of green solutions for homeowners. Get a free estimate today!" />
+<meta name="author" content="Tyler Michael, Ty Strong, and Bryan Weston" />
+<meta name="googlebot" content="index" />
+<meta name="robots" content="All" />
+<meta name="revisit-after" content="24 hours" />
+<link rel="shortcut icon" href="images/ugologo.ico" />
+<meta property="og:image" content="images/icon-ugo.png" />
+<meta property="og:title" content="A Greener Tomorrow." />
+<meta property="og:description" content="We are UGOgreener; a supplier of green solutions for homeowners. Get a free estimate today!" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jsapi.js"></script>
+<title>UGOgreener | Providing Green Solutions for Homeowners.</title>
+</head>
+<body>
+<div id="menu-container">
+  <div id="pickme" class="menu"><a href="index.html"><span id="item1" class="menu-item">Home</span></a> <a href="aboutus.html"><span id="item2" class="menu-item">About Us</span></a> <a href="solutions.html"><span id="item3" class="menu-item">Solutions</span></a> <a href="#"><span id="item4" class="menu-item">Contact</span></a>
+    <div class="arrow-container" onClick="hideMenu()">
+      <div class="arrow"> </div>
+    </div>
+  </div>
+</div>
+<div id="closed-container">
+  <div class="closed-menu">
+    <div class="closed-arrow-container" onClick="hideClosed()">
+      <div class="closed-arrow"></div>
+    </div>
+  </div>
+</div>
+<a href="index.html"><img class="logo" src="images/logo.png" alt="" /></a>
+<div class="content"><a href="solutions.html"><div class="solutions-back">&laquo; Back</div></a><div class="energyContent">
+  <span class="energyTitle">Biofuel</span><br />
+  <iframe class="left" width="380" height="285" src="http://www.youtube.com/embed/99ZYIECx1Vw" frameborder="0" allowfullscreen></iframe>
+  <p>Although it has been promoted mostly as a fuel for diesel-powered vehicles, biodiesel is perfectly suited as an additive or replacement fuel in a standard oil-fired furnace or boiler. When used as a heating fuel, biodiesel is sometimes referred to as " biofuel" or "bioheat." Made from new and used vegetable oils or animal fats, this fuel also has the advantage of being biodegradable, nontoxic and renewable</p><p>In the chart below, you can see how many <i>millions</i> of gallons of biofuel are produced in each individual state. The legend ranges from one million gallons, all the way up to the state know for producing the most biofuel, Texas, with 408 million gallons. (If the state is blank, that state does not produce a large amount of biofuels.)</p>
+<div class="wrap">
+<div id="chart_div"></div>
+</div>
+</div>
+<img class="energyIcon" src="images/icon-biofuel.png" alt="" />
+</div>
+<div class="footer"> <span class="footer-follow">Follow Us:</span> <a href="#"><img class="footer-icon" src="images/footer-facebook.png" alt="" title="Facebook" /></a><a href="#"><img class="footer-icon" src="images/footer-twitter.png" alt="" title="Twitter" /></a><a href="#"><img class="footer-icon" src="images/footer-delicious.png" alt="" title="Delicious" /></a><a href="#"><img class="footer-icon" src="images/footer-googleplus.png" alt="" title="Google+" /></a><a href="#"><img class="footer-icon" src="images/footer-myspace.png" alt="" title="Myspace" /></a><a href="#"><img class="footer-icon" src="images/footer-rss.png" alt="" title="RSS Feed" /></a><span class="footer-link"><a href="#">Site Map</a></span> <span class="footer-link"><a href="#">Site Info</a> </span><span class="footer-link"><a href="#">Developers</a> </span> </div>
+<script type = "text/javascript">
+
+function hideMenu(){
+document.getElementById("menu-container").style.top="-50px";
+window.setTimeout(showClosed(),0)
+}
+
+function showClosed(){
+document.getElementById("closed-container").style.top="0px";
+}
+
+function hideClosed(){
+document.getElementById("closed-container").style.top="-50px";
+window.setTimeout(showMenu(),0)
+}
+
+function showMenu(){
+document.getElementById("menu-container").style.top="0px";
+}
+
+google.load('visualization', '1', {'packages': ['geochart']});
+     google.setOnLoadCallback(drawMarkersMap);
+
+function drawMarkersMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['State',  'Gallons of Biofuel (In Millions)',],
+		['Alaska',,],
+		['Alabama', 49,],
+		['Arkansas', 85,],
+        ['Washington', 109,],
+        ['Utah', 10,],
+        ['South Dakota', 2,],
+	    ['North Dakota',,],
+		['California', 57,],
+		['Orgeon', 1,],
+		['Idaho',,],
+        ['Arizona',,],
+        ['New Mexico',,],
+        ['Nevada', 1,],
+	    ['Montana',,],
+		['Wyoming',,],
+		['Colorado',,],
+		['Kansas', 1,],
+        ['Rhode Island', 1,],
+        ['New York', 20,],
+        ['Nebraska',,],
+	    ['Iowa', 250,],
+		['Missouri', 170,],
+		['Wisconsin', 31,],
+		['Michigan', 18,],
+        ['Arizona', 2,],
+        ['New Mexico',,],
+        ['Nevada', 3,],
+	    ['Montana', 3,],
+		['Texas', 408,],
+		['New Hampshire', 3,],
+		['Conneticut', 3,],
+		['North Carolina', 10,],
+		['South Carolina', 41,],
+		['Louisiana', 12,],
+		['Mississippi', 105,],
+		['Alabama', 45,],
+		['Georgia', 20,],
+		['Florida', 3,],
+		['West Virginia',,],
+		['Virginia', 9,],
+		['Pennsylvania', 90,],
+		['Vermont',,],
+		['Maine', 1,],
+		['Massechusetts',,],
+		['Conneticut', 3,],
+		['Maryland', 3,],
+		['Hawaii',,],
+		['Minnesota', 107,],
+		['Oklahoma', 15,],
+		['Ohio', 67,],
+		['Indiana', 104,],
+		['Kentucky', 68,],
+		['Illinois', 251,],
+		['Tennessee', 2,],
+
+      ]);
+
+      var options = {
+        region: 'US',
+        displayMode: 'regions',
+        resolution: 'provinces',
+        backgroundColor:{fill:'#333'},
+        colorAxis: {colors: ['#E6E9ED', '#FFCE54', '#FFCE54', '#F6BB42', '#F6BB42', '#FC6E51', '#FC6E51', '#E9573F', '#E9573F']}
+        };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    };
+</script>​
+</body>
+</html>

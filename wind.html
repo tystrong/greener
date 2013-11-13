@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="Ugo, greener, ugogreener, homeowners, solutions, bpa, design team" />
+<meta name="Description" content="We are UGOgreener; a supplier of green solutions for homeowners. Get a free estimate today!" />
+<meta name="author" content="Tyler Michael, Ty Strong, and Bryan Weston" />
+<meta name="googlebot" content="index" />
+<meta name="robots" content="All" />
+<meta name="revisit-after" content="24 hours" />
+<link rel="shortcut icon" href="images/ugologo.ico" />
+<meta property="og:image" content="images/icon-ugo.png" />
+<meta property="og:title" content="A Greener Tomorrow." />
+<meta property="og:description" content="We are UGOgreener; a supplier of green solutions for homeowners. Get a free estimate today!" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<title>UGOgreener | Providing Green Solutions for Homeowners.</title>
+</head>
+<body>
+<div id="menu-container">
+  <div id="pickme" class="menu"><a href="index.html"><span id="item1" class="menu-item">Home</span></a> <a href="aboutus.html"><span id="item2" class="menu-item">About Us</span></a> <a href="solutions.html"><span id="item3" class="menu-item">Solutions</span></a> <a href="#"><span id="item4" class="menu-item">Contact</span></a>
+    <div class="arrow-container" onClick="hideMenu()">
+      <div class="arrow"> </div>
+    </div>
+  </div>
+</div>
+<div id="closed-container">
+  <div class="closed-menu">
+    <div class="closed-arrow-container" onClick="hideClosed()">
+      <div class="closed-arrow"></div>
+    </div>
+  </div>
+</div>
+<a href="index.html"><img class="logo" src="images/logo.png" alt="" /></a>
+<div class="content"><a href="solutions.html"><div class="solutions-back">&laquo; Back</div></a><div class="energyContent">
+  <span class="energyTitle">Wind Energy</span><br />
+  <iframe class="left" width="380" height="285" src="http://www.youtube.com/embed/99ZYIECx1Vw" frameborder="0" allowfullscreen></iframe>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div><img class="energyIcon" src="images/icon-wind.png" alt="" />
+</div>
+<div class="footer"> <span class="footer-follow">Follow Us:</span> <a href="#"><img class="footer-icon" src="images/footer-facebook.png" alt="" title="Facebook" /></a><a href="#"><img class="footer-icon" src="images/footer-twitter.png" alt="" title="Twitter" /></a><a href="#"><img class="footer-icon" src="images/footer-delicious.png" alt="" title="Delicious" /></a><a href="#"><img class="footer-icon" src="images/footer-googleplus.png" alt="" title="Google+" /></a><a href="#"><img class="footer-icon" src="images/footer-myspace.png" alt="" title="Myspace" /></a><a href="#"><img class="footer-icon" src="images/footer-rss.png" alt="" title="RSS Feed" /></a><span class="footer-link"><a href="#">Site Map</a></span> <span class="footer-link"><a href="#">Site Info</a> </span><span class="footer-link"><a href="#">Developers</a> </span> </div>
+<script type = "text/javascript">
+
+function hideMenu(){
+document.getElementById("menu-container").style.top="-50px";
+window.setTimeout(showClosed(),0)
+}
+
+function showClosed(){
+document.getElementById("closed-container").style.top="0px";
+}
+
+function hideClosed(){
+document.getElementById("closed-container").style.top="-50px";
+window.setTimeout(showMenu(),0)
+}
+
+function showMenu(){
+document.getElementById("menu-container").style.top="0px";
+}
+</script>​
+</body>
+</html>

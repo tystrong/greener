@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="Ugo, greener, ugogreener, homeowners, solutions, bpa, design team" />
+<meta name="Description" content="We are UGOgreener; a supplier of green solutions for homeowners. Get a free estimate today!" />
+<meta name="author" content="Tyler Michael, Ty Strong, and Bryan Weston" />
+<meta name="googlebot" content="index" />
+<meta name="robots" content="All" />
+<meta name="revisit-after" content="24 hours" />
+<link rel="shortcut icon" href="images/ugologo.ico" />
+<meta property="og:image" content="images/icon-ugo.png" />
+<meta property="og:title" content="A Greener Tomorrow." />
+<meta property="og:description" content="We are UGOgreener; a supplier of green solutions for homeowners. Get a free estimate today!" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<title>UGOgreener | Providing Green Solutions for Homeowners.</title>
+</head>
+<body>
+<div id="menu-container">
+  <div id="pickme" class="menu"><a href="index.html"><span id="item1" class="menu-item">Home</span></a> <a href="aboutus.html"><span id="item2" class="menu-item">About Us</span></a> <a href="solutions.html"><span id="item3" class="menu-item">Solutions</span></a> <a href="#"><span id="item4" class="menu-item">Contact</span></a>
+    <div class="arrow-container" onClick="hideMenu()">
+      <div class="arrow"> </div>
+    </div>
+  </div>
+</div>
+<div id="closed-container">
+  <div class="closed-menu">
+    <div class="closed-arrow-container" onClick="hideClosed()">
+      <div class="closed-arrow"></div>
+    </div>
+  </div>
+</div>
+<a href="index.html"><img class="logo" src="images/logo.png" alt="" /></a>
+<div class="content"><a href="solutions.html"><div class="solutions-back">&laquo; Back</div></a><div class="energyContent">
+  <span class="energyTitle">Solar Energy</span>
+  <br />
+  <iframe class="left" width="380" height="285" src="http://www.youtube.com/embed/99ZYIECx1Vw" frameborder="0" allowfullscreen></iframe>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="calcContent">
+    <div class="sidel">
+      <div class="calcTitle"><i>Solar Energy Savings Calculator</i></div>
+      <br />
+      <br />
+      <label>State:</label>
+      <select onChange="calc()" id="stateDropdown">
+        <option id="optionDrop"></option>
+        <option value = "AL">Alabama</option>
+        <option value = "AK">Alaska</option>
+        <option value = "AZ">Arizona</option>
+        <option value = "AR">Arkansas</option>
+        <option value = "CA">California</option>
+        <option value = "CO">Colorado</option>
+        <option value = "CT">Connecticut</option>
+        <option value = "DE">Delaware</option>
+        <option value = "FL">Florida</option>
+        <option value = "GA">Georgia</option>
+        <option value = "HI">Hawaii</option>
+        <option value = "ID">Idaho</option>
+        <option value = "IL">Illinois</option>
+        <option value = "IN">Indiana</option>
+        <option value = "IA">Iowa</option>
+        <option value = "KS">Kansas</option>
+        <option value = "KY">Kentucky</option>
+        <option value = "LA">Louisiana</option>
+        <option value = "ME">Maine</option>
+        <option value = "MD">Maryland</option>
+        <option value = "MA">Massachusetts</option>
+        <option value = "MI">Michigan</option>
+        <option value = "MN">Minnestoa</option>
+        <option value = "MS">Mississippi</option>
+        <option value = "MO">Missouri</option>
+        <option value = "MT">Montana</option>
+        <option value = "NE">Nebraska</option>
+        <option value = "NV">Nevada</option>
+        <option value = "NH">New Hampshire</option>
+        <option value = "NJ">New Jersey</option>
+        <option value = "NM">New Mexico</option>
+        <option value = "NY">New York</option>
+        <option value = "NC">North Carolina</option>
+        <option value = "ND">North Dakota</option>
+        <option value = "OH">Ohio</option>
+        <option value = "OK">Oklahoma</option>
+        <option value = "OR">Oregon</option>
+        <option value = "PA">Pennsylvania</option>
+        <option value = "RI">Rhode Island</option>
+        <option value = "SC">South Carolina</option>
+        <option value = "SD">South Dakota</option>
+        <option value = "TN">Tennessee</option>
+        <option value = "TX">Texas</option>
+        <option value = "UT">Utah</option>
+        <option value = "VT">Vermont</option>
+        <option value = "VA">Virgina</option>
+        <option value = "WA">Washington</option>
+        <option value = "WV">West Virgina</option>
+        <option value = "WI">Wisconsin</option>
+        <option value = "WY">Wyoming</option>       
+      </select>
+    </div>
+    <div id="hiddenDiv" class="sider"> Net Cost:
+      <div id="net"></div>
+      <br />
+      Daily Savings:
+      <div id="daily"></div>
+      <br />
+      Monthly Savings:
+      <div id="monthly"></div>
+      <br />
+      Yearly Savings:
+      <div id="yearly"></div>
+      <br />
+      Time To Pay Off:
+      <div id="timeto"></div>
+    </div>
+  </div>
+</div>
+<img class="energyIcon" src="images/icon-solar.png" alt="" />
+</div>
+<div class="footer"> <span class="footer-follow">Follow Us:</span> <a href="#"><img class="footer-icon" src="images/footer-facebook.png" alt="" title="Facebook" /></a><a href="#"><img class="footer-icon" src="images/footer-twitter.png" alt="" title="Twitter" /></a><a href="#"><img class="footer-icon" src="images/footer-delicious.png" alt="" title="Delicious" /></a><a href="#"><img class="footer-icon" src="images/footer-googleplus.png" alt="" title="Google+" /></a><a href="#"><img class="footer-icon" src="images/footer-myspace.png" alt="" title="Myspace" /></a><a href="#"><img class="footer-icon" src="images/footer-rss.png" alt="" title="RSS Feed" /></a><span class="footer-link"><a href="#">Site Map</a></span> <span class="footer-link"><a href="#">Site Info</a> </span><span class="footer-link"><a href="#">Developers</a> </span> </div>
+<script type = "text/javascript">
+function calc() {
+
+  document.getElementById("hiddenDiv").style.display="block";
+  var states = {
+         "AL": [23390, 59],
+		 "AK": [19031, 65],
+		 "AZ": [14588, 137],
+		 "AR": [18595, 59],
+		 "CA": [10192, 143],
+		 "CO": [15747, 102],
+		 "CT": [15010, 124],
+		 "DE": [10259, 80],
+		 "FL": [24692, 139],
+		 "GA": [15489, 89],
+		 "HI": [12818, 270],
+		 "ID": [16947, 57],
+		 "IL": [12333, 49],
+		 "IN": [17964, 58],
+		 "IA": [19410, 67],
+		 "KS": [12793, 35],
+		 "KY": [19447, 61],
+		 "LA": [3552, 64],
+		 "ME": [10983, 76],
+		 "MD": [6890, 47],
+		 "MA": [7061, 57],
+		 "MI": [17674, 80],
+		 "MN": [13564, 84],
+		 "MS": [24221, 61],
+		 "MO": [14589, 61],
+		 "MT": [20593, 91],
+		 "NE": [18391, 64],
+		 "NV": [21020, 145],
+		 "NH": [15785, 100],
+		 "NJ": [8802, 72],
+		 "NM": [16383, 137],
+		 "NY": [9856, 130],
+		 "NC": [13896, 89],
+		 "ND": [23015, 36],
+		 "OH": [15916, 73],
+		 "OK": [23275, 44],
+		 "OR": [15723, 78],
+		 "PA": [15977, 90],
+		 "RI": [18831, 91],
+		 "SC": [21659, 114],
+		 "SD": [38428, 76],
+		 "TN": [24307, 76],
+		 "TX": [17088, 87],
+		 "UT": [16763, 87],
+		 "VT": [17947, 90],
+		 "VA": [16127, 54],
+		 "WA": [22834, 71],
+		 "WV": [22483, 40],
+		 "WI": [20945, 76],
+		 "WY": [20918, 56],
+     }
+  var selectedValue = document.getElementById("stateDropdown").value;
+  var nc = states[selectedValue][0];
+  var ms = states[selectedValue][1];
+  var ds=ms/30;
+  var ys=ms*12;
+  var pf=nc/ys;
+  var dsr=Math.round(ds);
+  var pfr=Math.round(pf);
+  document.getElementById("net").innerHTML="$"+nc;
+  document.getElementById("daily").innerHTML="$"+dsr;
+  document.getElementById("monthly").innerHTML="$"+ms;
+  document.getElementById("yearly").innerHTML="$"+ys;
+  document.getElementById("timeto").innerHTML=pfr+" years";
+  var sel=document.getElementById("stateDropdown")
+  sel.options[0].disabled=true;
+  }
+  
+function hideMenu(){
+document.getElementById("menu-container").style.top="-50px";
+window.setTimeout(showClosed(),0)
+}
+
+function showClosed(){
+document.getElementById("closed-container").style.top="0px";
+}
+
+function hideClosed(){
+document.getElementById("closed-container").style.top="-50px";
+window.setTimeout(showMenu(),0)
+}
+
+function showMenu(){
+document.getElementById("menu-container").style.top="0px";
+}
+
+google.load('visualization', '1', {'packages': ['geochart']});
+     google.setOnLoadCallback(drawMarkersMap);
+
+function drawMarkersMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['State',  'General Link',],
+['Alaska', 65559,],
+		['Alabama', 565648,],
+		['Arkansas', 13437,],
+     ['WA', 563437,],
+      ['UT', 94437,],
+      ['SD', 296237,],
+		 
+
+      ]);
+
+      var options = {
+        region: 'US',
+        displayMode: 'regions',
+        resolution: 'provinces',
+        backgroundColor:{fill:'#222'},
+        colorAxis: {colors: ['#FFCE54', '#E9573F']}
+        };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    };
+</script>​
+</body>
+</html>
