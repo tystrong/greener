@@ -1,0 +1,20 @@
+-----------------css-----------------
+
+/*  For the active question header  */
+.question.active {
+    text-shadow: 2px 2px #555;
+    color: #fff;
+    size: 60px;
+    width: auto;
+}
+
+/*  For the active paragraph  */
+.p-active {
+    size: 18px;
+    color: #fff;
+}
+
+-----------------js------------------
+$('.ribbon').click( function(){
+    
+});

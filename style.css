@@ -110,8 +110,8 @@ a:active {
 	-ms-transition-duration: 500ms, 500ms, 500ms, 500ms;
 	transition-property: font-size, text-shadow, color, width;
 	transition-duration: 500ms, 500ms, 500ms, 500ms;
-	text-shadow: 10px 10px transparent;
-	color: transparent;
+	text-shadow: 2px 2px #555;
+	color: #fff;
 	font-size: 0;
 	float: left;
 }
@@ -119,6 +119,12 @@ a:active {
 	font-size: 60px;
 	color: #fff;
 	text-shadow: 2px 2px #555;
+}
+#question.active {
+    text-shadow: 2px 2px #555;
+    color: #fff;
+    size: 60px;
+    width: auto;
 }
 #answer {
 	position: absolute;
@@ -135,7 +141,8 @@ a:active {
 	transition-property: top;
 	transition-duration: 500ms;
 }
-.ribbon-solar h2, .ribbon-biofuel h2, .ribbon-wind h2, .ribbon-geothermal h2 {
+/*-------------------------------------------------------------*/
+.ribbon h2 {
 	-webkit-transition-property: width;
 	-webkit-transition-duration: 300ms;
 	-moz-transition-property: width;
@@ -156,11 +163,11 @@ a:active {
 	border-top-left-radius: 3px;
 	font-weight: 400;
 }
-.ribbon-solar:hover h2, .ribbon-biofuel:hover h2, .ribbon-wind:hover h2, .ribbon-geothermal:hover h2 {
+.ribbon:hover h2 {
 	width: 270px;
 	cursor: pointer;
 }
-.ribbon-solar:after, .ribbon-biofuel:after, .ribbon-wind:after, .ribbon-geothermal:after {
+.solar:after, .biofuel:after, .wind:after, .geothermal:after {
 	content: ' ';
 	position: absolute;
 	width: 0;
@@ -169,38 +176,39 @@ a:active {
 	border-width: 5px 10px;
 	border-style: solid;
 }
-.ribbon-solar h2 {
+.solar h2 {
 	top: 0;
 	background-color: #FFCE54;
 }
-.ribbon-solar:after {
+.solar:after {
 	top: 69px;
 	border-color: #F6BB42 transparent transparent #F6BB42;
 }
-.ribbon-biofuel h2 {
+.biofuel h2 {
 	top: 60px;
 	background-color: #FC6E51;
 }
-.ribbon-biofuel:after {
+.biofuel:after {
 	top: 129px;
 	border-color: #E9573F transparent transparent #E9573F;
 }
-.ribbon-wind h2 {
+.wind h2 {
 	top: 120px;
 	background-color: #4FC1E9;
 }
-.ribbon-wind:after {
+.wind:after {
 	top: 189px;
 	border-color: #3BAFDA transparent transparent #3BAFDA;
 }
-.ribbon-geothermal h2 {
+.geothermal h2 {
 	top: 180px;
 	background-color: #A0D468;
 }
-.ribbon-geothermal:after {
+.geothermal:after {
 	top: 249px;
 	border-color: #8CC152 transparent transparent #8CC152;
 }
+/*-------------------------------------------------------------*/
 .energyTitle {
 	font-size: 60px;
 	color: #fff;
@@ -327,7 +335,7 @@ a:active {
 img.logo {
 	padding: 20px 100px;
 }
-img#icon1, img#icon2, img#icon3, img#icon4 {
+img#solar, img#geo, img#wind, img#bio {
 	-webkit-transition-property: top;
 	-webkit-transition-duration: 400ms;
 	-moz-transition-property: top;
@@ -356,16 +364,16 @@ img#icon1, img#icon2, img#icon3, img#icon4 {
 	height: 140px;
 	margin: 0 0 -20px 0;
 }
-img#icon1 {
+img#solar {
 	left: 70px;
 }
-img#icon2 {
+img#bio {
 	left: 270px;
 }
-img#icon3 {
+img#wind {
 	left: 470px;
 }
-img#icon4 {
+img#geo {
 	left: 670px;
 }
 #paraSolar, #paraBiofuel, #paraWind, #paraGeothermal {
