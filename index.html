@@ -49,16 +49,16 @@
     </a>
     <div class="content">
         <div id="titles">
-            <span id="titleSolar" data-el="solar">
+            <span id="title" data-el="solar">
                 <span class="question">Solar Energy</span>
             </span>
-            <span id="titleBiofuel" data-el="bio">
+            <span id="title" data-el="bio">
                 <span class="question">Biofuel</span>
             </span>
-            <span id="titleWind" data-el="wind">
+            <span id="title" class="activeTitle" data-el="wind">
                 <span class="question">Wind Energy</span>
             </span>
-            <span id="titleGeothermal" data-el="geo">
+            <span id="title" data-el="geo">
                 <span class="question">Geothermal Energy</span>
             </span>
             <br />
@@ -71,28 +71,30 @@
         </div>
         <br />
         <p id="answer">
-            <span id="first" class="active">We are a small business supplying green energy solutions to homeowners across the nation. Using wind, earth, and the sun to our advantage, we are making the planet a cleaner place; one home at a time.</span>
-            <span id="paraSolar" data-el="solar">Energy derived from the Sun's radiation. Passive solar energy can be exploited through architectural design, as by positioning windows to allow sunlight to enter and help heat a space. Active solar energy involves the conversion of sunlight to electrical energy, especially in solar (photovoltaic) cells.</span>
-            <span id="paraBiofuel" data-el="bio">Fuel produced from renewable resources, especially plant biomass, vegetable oils, and treated municipal and industrial wastes. Biofuels are considered neutral with respect to the emission of carbon dioxide because the carbon dioxide given off by burning them is balanced by the carbon dioxide absorbed by the plants that are grown to produce them. The use of biofuels as an additive.</span>
-            <span id="paraWind" data-el="wind">Earth Sciences / Physical Geography) a current of air, sometimes of considerable force, moving generally horizontally from areas of high pressure to areas of low pressure See also Beaufort scale Related adj aeolian. can also result in cleaner burning with less emission of carbon monoxide and particulates. to petroleum-based fuels.</span>
-            <span id="paraGeothermal" data-el="geo">Relating to the internal heat of the Earth. The water of hot springs and geysers is heated by geothermal sources. Geothermal energy is power generated from natural steam, hot water, hot rocks, or lava in the Earth's crust. In general, geothermal power is produced by pumping water into cracks in the Earth's crust and then conveying.</span>
+            <span id="para" class="activePara">We are a small business supplying green energy solutions to homeowners across the nation. Using wind, earth, and the sun to our advantage, we are making the planet a cleaner place; one home at a time.</span>
+            <span id="para" data-el="solar">Energy derived from the Sun's radiation. Passive solar energy can be exploited through architectural design, as by positioning windows to allow sunlight to enter and help heat a space. Active solar energy involves the conversion of sunlight to electrical energy, especially in solar (photovoltaic) cells.</span>
+            <span id="para" data-el="bio">Fuel produced from renewable resources, especially plant biomass, vegetable oils, and treated municipal and industrial wastes. Biofuels are considered neutral with respect to the emission of carbon dioxide because the carbon dioxide given off by burning them is balanced by the carbon dioxide absorbed by the plants that are grown to produce them. The use of biofuels as an additive.</span>
+            <span id="para" data-el="wind">Earth Sciences / Physical Geography) a current of air, sometimes of considerable force, moving generally horizontally from areas of high pressure to areas of low pressure See also Beaufort scale Related adj aeolian. can also result in cleaner burning with less emission of carbon monoxide and particulates. to petroleum-based fuels.</span>
+            <span id="para" data-el="geo">Relating to the internal heat of the Earth. The water of hot springs and geysers is heated by geothermal sources. Geothermal energy is power generated from natural steam, hot water, hot rocks, or lava in the Earth's crust. In general, geothermal power is produced by pumping water into cracks in the Earth's crust and then conveying.</span>
         </p>
-        <div onClick="showSolar()" data-el="solar" class="ribbon solar">
+        <div data-el="solar" class="ribbon solar">
             <h2>Solar</h2>
         </div>
-        <div onClick="showBiofuel()" data-el="bio" class="ribbon biofuel">
+        <div onClick="" data-el="bio" class="ribbon biofuel">
             <h2>Biofuel</h2>
         </div>
-        <div onClick="showWind()" data-el="wind" class="ribbon wind">
+        <div data-el="wind" class="ribbon wind">
             <h2>Wind</h2>
         </div>
-        <div onClick="showGeothermal()" data-el="geo" class="ribbon geothermal">
+        <div data-el="geo" class="ribbon geothermal">
             <h2>Geothermal</h2>
         </div>
+<div class="images">
         <img id="solar" data-el="solar" src="images/icon-solar.png" alt="" />
         <img id="bio" data-el="bio" src="images/icon-biofuel.png" alt="" />
         <img id="wind" data-el="wind" src="images/icon-wind.png" alt="" />
-        <img id="geo" data-el="geo" src="images/icon-geothermal.png" alt="" />
+        <img id="geo" data-el="geo" src="images/icon-geothermal.png"  alt="" />
+    </div>
         <div class="video">
             <h2>Our Videos</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -131,6 +133,18 @@
             <a href="#">Developers</a>
         </span>
     </div>
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+           $('.ribbon').on('click', function() {
+               var dataEl = $(this).data('el');
+               $(".images").data(dataEl).addClass('activeImage');
+               $('#title').data(dataEl).addClass("activeTitle");
+               alert(dataEl);
+           });
+        });
+    </script>
     <script type="text/javascript">
         function showSolar() {
             document.getElementById("titleSolar").style.textShadow = "2px 2px #555";
@@ -319,7 +333,6 @@
             document.getElementById("menu-container").style.top = "0";
         }
     </script>​
-    <script type="text/javascript" src="jquery.min.js"></script>
 </body>
 
 </html>

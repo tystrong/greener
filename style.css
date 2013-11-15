@@ -101,7 +101,7 @@ a:active {
 	transition-property: top;
 	transition-duration: 500ms;
 }
-#question, #titleSolar, #titleBiofuel, #titleWind, #titleGeothermal {
+#question, #title {
 	-webkit-transition-property: font-size, text-shadow, color, width;
 	-webkit-transition-duration: 500ms, 500ms, 500ms, 500ms;
 	-moz-transition-property: font-size, text-shadow, color, width;
@@ -120,7 +120,7 @@ a:active {
 	color: #fff;
 	text-shadow: 2px 2px #555;
 }
-#question.active {
+.active {
     text-shadow: 2px 2px #555;
     color: #fff;
     size: 60px;
@@ -376,7 +376,7 @@ img#wind {
 img#geo {
 	left: 670px;
 }
-#paraSolar, #paraBiofuel, #paraWind, #paraGeothermal {
+#para {
 	-webkit-transition-property: font-size, color;
 	-webkit-transition-duration: 500ms, 100ms;
 	-moz-transition-property: font-size, color;
@@ -387,6 +387,15 @@ img#geo {
 	transition-duration: 500ms, 500ms;
 	color: transparent;
 	font-size: 0;
+}
+.activeTitle {
+    text-shadow: 2px 2px #555;
+    size: 60px;
+    color: #fff;
+}
+.activePara {
+    color: #fff;
+    font-size: 16px;
 }
 #first {
 	-webkit-transition-property: color;
