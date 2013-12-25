@@ -141,7 +141,7 @@ a:active {
 	transition-property: top;
 	transition-duration: 500ms;
 }
-/*-------------------------------------------------------------*/
+/*-----------------------ribbons--------------------------------------*/
 .ribbon h2 {
 	-webkit-transition-property: width;
 	-webkit-transition-duration: 300ms;
@@ -208,7 +208,7 @@ a:active {
 	top: 249px;
 	border-color: #8CC152 transparent transparent #8CC152;
 }
-/*-------------------------------------------------------------*/
+/*------------------------end ribbons-------------------------------------*/
 .energyTitle {
 	font-size: 60px;
 	color: #fff;
@@ -389,13 +389,14 @@ img#geo {
 	font-size: 0;
 }
 .activeTitle {
-    text-shadow: 2px 2px #555;
-    size: 60px;
-    color: #fff;
+	margin-top: 125px;
+    text-shadow: 2px 2px #555 !important;
+    font-size: 60px !important;
+    color: #fff !important;
 }
 .activePara {
-    color: #fff;
-    font-size: 16px;
+    color: #fff !important;
+    font-size: 16px !important;
 }
 #first {
 	-webkit-transition-property: color;

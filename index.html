@@ -17,6 +17,8 @@
     <title>UGOgreener | Providing Green Solutions for Homeowners.</title>
 </head>
 
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 <body>
     <div id="menu-container">
         <div id="pickme" class="menu">
@@ -55,7 +57,7 @@
             <span id="title" data-el="bio">
                 <span class="question">Biofuel</span>
             </span>
-            <span id="title" class="activeTitle" data-el="wind">
+            <span id="title" class="" data-el="wind">
                 <span class="question">Wind Energy</span>
             </span>
             <span id="title" data-el="geo">
@@ -139,9 +141,11 @@
         $(document).ready(function() {
            $('.ribbon').on('click', function() {
                var dataEl = $(this).data('el');
-               $(".images").data(dataEl).addClass('activeImage');
-               $('#title').data(dataEl).addClass("activeTitle");
-               alert(dataEl);
+               $('#question').hide();
+               $('.activePara').removeClass('activePara');
+               $('#para'+"[data-el='" + dataEl + "']").addClass('activePara');
+               $('.activeTitle').removeClass('activeTitle');
+               $("#title"+"[data-el='" + dataEl + "']").addClass('activeTitle');
            });
         });
     </script>
