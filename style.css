@@ -19,6 +19,9 @@ a:hover {
 a:active {
 	color: #000
 }
+img {
+	border: none;
+}
 .content, .energyContent {
 	position: relative;
 	margin: 0 auto;
@@ -163,9 +166,16 @@ a:active {
 	border-top-left-radius: 3px;
 	font-weight: 400;
 }
+.ribbonActive {
+	width: 270px !important;
+}
 .ribbon:hover h2 {
 	width: 270px;
 	cursor: pointer;
+}
+.ribbon > h2:after {
+	text-transform: capitalize;
+	content: attr(data-el);
 }
 .solar:after, .biofuel:after, .wind:after, .geothermal:after {
 	content: ' ';
@@ -175,6 +185,7 @@ a:active {
 	right: -20px;
 	border-width: 5px 10px;
 	border-style: solid;
+	content: attr(data-el);
 }
 .solar h2 {
 	top: 0;
@@ -365,6 +376,7 @@ img#solar, img#geo, img#wind, img#bio {
 	margin: 0 0 -20px 0;
 }
 img#solar {
+	background-image: url(images/icon-solar.png);
 	left: 70px;
 }
 img#bio {
@@ -389,14 +401,16 @@ img#geo {
 	font-size: 0;
 }
 .activeTitle {
-	margin-top: 125px;
     text-shadow: 2px 2px #555 !important;
     font-size: 60px !important;
     color: #fff !important;
 }
 .activePara {
     color: #fff !important;
-    font-size: 16px !important;
+    font-size: 18px !important;
+}
+.a-ic {
+	top: 325px !important;
 }
 #first {
 	-webkit-transition-property: color;

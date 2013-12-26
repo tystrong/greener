@@ -6,7 +6,7 @@
     <meta name="Keywords" content="Ugo, greener, ugogreener, homeowners, solutions, bpa, design team" />
     <meta name="Description" content="We are UGOgreener; a supplier of green solutions for homeowners. Get a free estimate today!" />
     <meta name="author" content="Tyler Michael, Ty Strong, and Bryan Weston" />
-    <meta name="googlebot" content="index" />
+    <meta name="googlebot" content="index" /> 
     <meta name="robots" content="All" />
     <meta name="revisit-after" content="24 hours" />
     <link rel="shortcut icon" href="images/ugologo.ico" />
@@ -54,13 +54,13 @@
             <span id="title" data-el="solar">
                 <span class="question">Solar Energy</span>
             </span>
-            <span id="title" data-el="bio">
+            <span id="title" data-el="biofuel">
                 <span class="question">Biofuel</span>
             </span>
             <span id="title" class="" data-el="wind">
                 <span class="question">Wind Energy</span>
             </span>
-            <span id="title" data-el="geo">
+            <span id="title" data-el="geothermal">
                 <span class="question">Geothermal Energy</span>
             </span>
             <br />
@@ -75,27 +75,27 @@
         <p id="answer">
             <span id="para" class="activePara">We are a small business supplying green energy solutions to homeowners across the nation. Using wind, earth, and the sun to our advantage, we are making the planet a cleaner place; one home at a time.</span>
             <span id="para" data-el="solar">Energy derived from the Sun's radiation. Passive solar energy can be exploited through architectural design, as by positioning windows to allow sunlight to enter and help heat a space. Active solar energy involves the conversion of sunlight to electrical energy, especially in solar (photovoltaic) cells.</span>
-            <span id="para" data-el="bio">Fuel produced from renewable resources, especially plant biomass, vegetable oils, and treated municipal and industrial wastes. Biofuels are considered neutral with respect to the emission of carbon dioxide because the carbon dioxide given off by burning them is balanced by the carbon dioxide absorbed by the plants that are grown to produce them. The use of biofuels as an additive.</span>
+            <span id="para" data-el="biofuel">Fuel produced from renewable resources, especially plant biomass, vegetable oils, and treated municipal and industrial wastes. Biofuels are considered neutral with respect to the emission of carbon dioxide because the carbon dioxide given off by burning them is balanced by the carbon dioxide absorbed by the plants that are grown to produce them. The use of biofuels as an additive.</span>
             <span id="para" data-el="wind">Earth Sciences / Physical Geography) a current of air, sometimes of considerable force, moving generally horizontally from areas of high pressure to areas of low pressure See also Beaufort scale Related adj aeolian. can also result in cleaner burning with less emission of carbon monoxide and particulates. to petroleum-based fuels.</span>
-            <span id="para" data-el="geo">Relating to the internal heat of the Earth. The water of hot springs and geysers is heated by geothermal sources. Geothermal energy is power generated from natural steam, hot water, hot rocks, or lava in the Earth's crust. In general, geothermal power is produced by pumping water into cracks in the Earth's crust and then conveying.</span>
+            <span id="para" data-el="geothermal">Relating to the internal heat of the Earth. The water of hot springs and geysers is heated by geothermal sources. Geothermal energy is power generated from natural steam, hot water, hot rocks, or lava in the Earth's crust. In general, geothermal power is produced by pumping water into cracks in the Earth's crust and then conveying.</span>
         </p>
-        <div data-el="solar" class="ribbon solar">
-            <h2>Solar</h2>
+        <div class="ribbon solar">
+            <h2 data-el="solar"></h2>
         </div>
-        <div onClick="" data-el="bio" class="ribbon biofuel">
-            <h2>Biofuel</h2>
+        <div class="ribbon biofuel">
+            <h2 data-el="biofuel"></h2>
         </div>
-        <div data-el="wind" class="ribbon wind">
-            <h2>Wind</h2>
+        <div class="ribbon wind">
+            <h2 data-el="wind"></h2>
         </div>
-        <div data-el="geo" class="ribbon geothermal">
-            <h2>Geothermal</h2>
+        <div class="ribbon geothermal">
+            <h2 data-el="geothermal"></h2>
         </div>
 <div class="images">
-        <img id="solar" data-el="solar" src="images/icon-solar.png" alt="" />
-        <img id="bio" data-el="bio" src="images/icon-biofuel.png" alt="" />
-        <img id="wind" data-el="wind" src="images/icon-wind.png" alt="" />
-        <img id="geo" data-el="geo" src="images/icon-geothermal.png"  alt="" />
+        <img class='image' id="solar" data-el="solar" alt="" />
+        <img class='image' id="bio" data-el="biofuel" alt="" />
+        <img class='image' id="wind" data-el="wind"  alt="" />
+        <img class='image' id="geo" data-el="geothermal"  alt="" />
     </div>
         <div class="video">
             <h2>Our Videos</h2>
@@ -140,184 +140,29 @@
     <script type="text/javascript">
         $(document).ready(function() {
            $('.ribbon').on('click', function() {
-               var dataEl = $(this).data('el');
+               var dataEl = $(this).children("h2").data('el');
                $('#question').hide();
+               if(dataEl == 'biofuel'){
+                $('#para'+"[data-el='"+ dataEl +"']").css({
+                    top: '-20px'
+                });
+               }
                $('.activePara').removeClass('activePara');
                $('#para'+"[data-el='" + dataEl + "']").addClass('activePara');
                $('.activeTitle').removeClass('activeTitle');
                $("#title"+"[data-el='" + dataEl + "']").addClass('activeTitle');
+               $('.a-ic').removeClass('a-ic');
+               $(".image"+"[data-el='" + dataEl + "']").addClass('a-ic');
+               $('.ribbonActive').removeClass('ribbonActive');
+               $(".ribbon").children("h2"+"[data-el='" + dataEl + "']").addClass('ribbonActive');
+               $("#titles").css({
+                   top: '10px'
+               });
+               $("#answer").css({
+                   top: '120px'
+               });
            });
         });
-    </script>
-    <script type="text/javascript">
-        function showSolar() {
-            document.getElementById("titleSolar").style.textShadow = "2px 2px #555";
-            document.getElementById("titleSolar").style.color = "#fff";
-            document.getElementById("titleSolar").style.fontSize = "60px";
-            document.getElementById("titleSolar").style.width = "auto";
-            document.getElementById("titleGeothermal").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleGeothermal").style.color = "transparent";
-            document.getElementById("titleGeothermal").style.fontSize = "0";
-            document.getElementById("titleGeothermal").style.width = "0";
-            document.getElementById("titleWind").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleWind").style.color = "transparent";
-            document.getElementById("titleWind").style.fontSize = "0";
-            document.getElementById("titleWind").style.width = "0";
-            document.getElementById("titleBiofuel").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleBiofuel").style.color = "transparent";
-            document.getElementById("titleBiofuel").style.fontSize = "0";
-            document.getElementById("titleBiofuel").style.width = "0";
-            document.getElementById("question").style.textShadow = "10px 10px transparent";
-            document.getElementById("question").style.color = "transparent";
-            document.getElementById("question").style.fontSize = "0";
-            document.getElementById("question").style.float = "none";
-            document.getElementById("answer").style.top = "120px";
-            document.getElementById("titles").style.top = "10px";
-            //          These are the icons
-            document.getElementById("solar").style.top = "325px";
-            document.getElementById("bio").style.top = "360px";
-            document.getElementById("wind").style.top = "360px";
-            document.getElementById("geo").style.top = "360px";
-            //          End icons
-            document.getElementById("paraSolar").style.fontSize = "18px";
-            document.getElementById("paraSolar").style.color = "#fff";
-            document.getElementById("paraBiofuel").style.fontSize = "0";
-            document.getElementById("paraBiofuel").style.color = "transparent";
-            document.getElementById("paraWind").style.fontSize = "0";
-            document.getElementById("paraWind").style.color = "transparent";
-            document.getElementById("paraGeothermal").style.fontSize = "0";
-            document.getElementById("paraGeothermal").style.color = "transparent";
-
-        }
-
-        function showBiofuel() {
-
-            document.getElementById("titleBiofuel").style.textShadow = "2px 2px #555";
-            document.getElementById("titleBiofuel").style.color = "#fff";
-            document.getElementById("titleBiofuel").style.fontSize = "60px";
-            document.getElementById("titleBiofuel").style.width = "auto";
-
-            document.getElementById("titleGeothermal").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleGeothermal").style.color = "transparent";
-            document.getElementById("titleGeothermal").style.fontSize = "0";
-            document.getElementById("titleGeothermal").style.width = "0";
-
-            document.getElementById("titleWind").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleWind").style.color = "transparent";
-            document.getElementById("titleWind").style.fontSize = "0";
-            document.getElementById("titleWind").style.width = "0";
-
-            document.getElementById("titleSolar").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleSolar").style.color = "transparent";
-            document.getElementById("titleSolar").style.fontSize = "0";
-            document.getElementById("titleSolar").style.width = "0";
-
-            document.getElementById("question").style.textShadow = "10px 10px transparent";
-            document.getElementById("question").style.color = "transparent";
-            document.getElementById("question").style.fontSize = "0";
-            document.getElementById("question").style.width = "0";
-
-            document.getElementById("answer").style.top = "120px";
-            document.getElementById("titles").style.top = "10px";
-
-            document.getElementById("solar").style.top = "360px";
-            document.getElementById("bio").style.top = "325px";
-            document.getElementById("wind").style.top = "360px";
-            document.getElementById("geo").style.top = "360px";
-
-            document.getElementById("paraBiofuel").style.fontSize = "18px";
-            document.getElementById("paraBiofuel").style.color = "#fff";
-
-            document.getElementById("paraSolar").style.fontSize = "0";
-            document.getElementById("paraSolar").style.color = "transparent";
-
-            document.getElementById("paraWind").style.fontSize = "0";
-            document.getElementById("paraWind").style.color = "transparent";
-
-            document.getElementById("paraGeothermal").style.fontSize = "0";
-            document.getElementById("paraGeothermal").style.color = "transparent";
-
-            document.getElementById("first").style.fontSize = "0";
-            document.getElementById("first").style.color = "transparent";
-        }
-
-        function showWind() {
-            document.getElementById("titleWind").style.textShadow = "2px 2px #555";
-            document.getElementById("titleWind").style.color = "#fff";
-            document.getElementById("titleWind").style.fontSize = "60px";
-            document.getElementById("titleWind").style.width = "auto";
-            document.getElementById("titleGeothermal").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleGeothermal").style.color = "transparent";
-            document.getElementById("titleGeothermal").style.fontSize = "0";
-            document.getElementById("titleGeothermal").style.width = "0";
-            document.getElementById("titleBiofuel").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleBiofuel").style.color = "transparent";
-            document.getElementById("titleBiofuel").style.fontSize = "0";
-            document.getElementById("titleBiofuel").style.width = "0";
-            document.getElementById("titleSolar").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleSolar").style.color = "transparent";
-            document.getElementById("titleSolar").style.fontSize = "0";
-            document.getElementById("titleSolar").style.width = "0";
-            document.getElementById("question").style.textShadow = "10px 10px transparent";
-            document.getElementById("question").style.color = "transparent";
-            document.getElementById("question").style.fontSize = "0";
-            document.getElementById("question").style.width = "0";
-            document.getElementById("answer").style.top = "120px";
-            document.getElementById("titles").style.top = "10px";
-            document.getElementById("solar").style.top = "360px";
-            document.getElementById("bio").style.top = "360px";
-            document.getElementById("wind").style.top = "325px";
-            document.getElementById("geo").style.top = "360px";
-            document.getElementById("paraWind").style.fontSize = "18px";
-            document.getElementById("paraWind").style.color = "#fff";
-            document.getElementById("paraBiofuel").style.fontSize = "0";
-            document.getElementById("paraBiofuel").style.color = "transparent";
-            document.getElementById("paraSolar").style.fontSize = "0";
-            document.getElementById("paraSolar").style.color = "transparent";
-            document.getElementById("paraGeothermal").style.fontSize = "0";
-            document.getElementById("paraGeothermal").style.color = "transparent";
-            document.getElementById("first").style.fontSize = "0";
-            document.getElementById("first").style.color = "transparent";
-        }
-
-        function showGeothermal() {
-            document.getElementById("titleGeothermal").style.textShadow = "2px 2px #555";
-            document.getElementById("titleGeothermal").style.color = "#fff";
-            document.getElementById("titleGeothermal").style.fontSize = "60px";
-            document.getElementById("titleGeothermal").style.width = "auto";
-            document.getElementById("titleWind").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleWind").style.color = "transparent";
-            document.getElementById("titleWind").style.fontSize = "0";
-            document.getElementById("titleWind").style.width = "0";
-            document.getElementById("titleBiofuel").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleBiofuel").style.color = "transparent";
-            document.getElementById("titleBiofuel").style.fontSize = "0";
-            document.getElementById("titleBiofuel").style.width = "0";
-            document.getElementById("titleSolar").style.textShadow = "10px 10px transparent";
-            document.getElementById("titleSolar").style.color = "transparent";
-            document.getElementById("titleSolar").style.fontSize = "0";
-            document.getElementById("titleSolar").style.width = "0";
-            document.getElementById("question").style.textShadow = "10px 10px transparent";
-            document.getElementById("question").style.color = "transparent";
-            document.getElementById("question").style.fontSize = "0";
-            document.getElementById("question").style.width = "0";
-            document.getElementById("answer").style.top = "120px";
-            document.getElementById("titles").style.top = "10px";
-            document.getElementById("solar").style.top = "360px";
-            document.getElementById("bio").style.top = "360px";
-            document.getElementById("wind").style.top = "360px";
-            document.getElementById("geo").style.top = "325px";
-            document.getElementById("paraGeothermal").style.fontSize = "18px";
-            document.getElementById("paraGeothermal").style.color = "#fff";
-            document.getElementById("paraBiofuel").style.fontSize = "0";
-            document.getElementById("paraBiofuel").style.color = "transparent";
-            document.getElementById("paraWind").style.fontSize = "0";
-            document.getElementById("paraWind").style.color = "transparent";
-            document.getElementById("paraSolar").style.fontSize = "0";
-            document.getElementById("paraSolar").style.color = "transparent";
-            document.getElementById("first").style.fontSize = "0";
-            document.getElementById("first").style.color = "transparent";
-        }
 
         function hideMenu() {
             document.getElementById("menu-container").style.top = "-50px";
