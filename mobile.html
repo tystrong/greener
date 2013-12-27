@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>MOBILE TEST</title>
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
+	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<nav id="nav" role="navigation">
+		<div class="menu-text">Ugo Greener</div>
+		<ul class="menu-item-container">
+			<a href="#" class="menu-ico"><i class="fa fa-bars fa-lg"></i></a>
+			<li class="menu-item"><a href="#">Home</a></li>
+			<li class="menu-item"><a href="#">About</a></li>
+			<li class="menu-item"><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	<div class="wrapper">
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, doloribus aspernatur explicabo perspiciatis exercitationem alias odit! Ducimus, illo, itaque, nobis, nemo explicabo quasi facilis reiciendis harum vero ea mollitia officia.</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(".menu-ico").hover(function() {
+			$(".menu-item-container").toggle(function() {
+				$(".menu-item-container").animate({height(toggle)}, 1000);
+			}, function() {
+				$(".menu-item-container").animate({height(toggle)}, 1000);
+			});
+			
+		}, function() {
+			$(".menu-item-container").toggle();
+		});
+	</script>
+	<script src="jquery.min.js"></script>
+</body>
+</html>
