@@ -3,14 +3,14 @@
 	<title>MOBILE TEST</title>
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
-	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1;">
 </head>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <body>
 	<nav id="nav" role="navigation">
 		<div class="menu-text">Ugo Greener</div>
-		<ul class="menu-item-container">
-			<a href="#" class="menu-ico"><i class="fa fa-bars fa-lg"></i></a>
+		<a href="#" class="menu-ico"><i class="fa fa-bars fa-lg"></i></a>
+		<ul class="menu-item-container" style="padding-top: 1px">
 			<li class="menu-item"><a href="#">Home</a></li>
 			<li class="menu-item"><a href="#">About</a></li>
 			<li class="menu-item"><a href="#">Contact</a></li>
@@ -18,21 +18,19 @@
 	</nav>
 	<div class="wrapper">
 		<div class="content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, doloribus aspernatur explicabo perspiciatis exercitationem alias odit! Ducimus, illo, itaque, nobis, nemo explicabo quasi facilis reiciendis harum vero ea mollitia officia.</p>
 		</div>
 	</div>
-	<script type="text/javascript">
-		$(".menu-ico").hover(function() {
-			$(".menu-item-container").toggle(function() {
-				$(".menu-item-container").animate({height(toggle)}, 1000);
-			}, function() {
-				$(".menu-item-container").animate({height(toggle)}, 1000);
-			});
-			
-		}, function() {
-			$(".menu-item-container").toggle();
-		});
-	</script>
 	<script src="jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function($) {
+		$(".menu-ico").click(function() {
+			// $('.menu-item-container').animate({
+			// 	height: 'toggle'
+			// }, 1000);
+			$('.menu-item-container').slideToggle(1000);
+			$(".menu-item").css('display', 'block');
+		});
+	});
+	</script>
 </body>
 </html>
