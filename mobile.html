@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>MOBILE TEST</title>
+	<title>hi</title>
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1;">
@@ -8,7 +8,7 @@
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <body>
 	<nav id="nav" role="navigation">
-		<div class="menu-text">Ugo Greener</div>
+		<div class="menu-text"><img src="images/icon-ugo.png" alt="" height="40px" width="40px"></div>
 		<a href="#" class="menu-ico"><i class="fa fa-bars fa-lg"></i></a>
 		<ul class="menu-item-container">
 			<a href="index.html"><li class="menu-item">Home</li></a>
@@ -28,7 +28,7 @@
 		$(".menu-ico").click(function() {
 			$('.menu-item-container').animate({
 				"height":"toggle"
-			}, 1000),
+			}, 800),
 			$(".menu-item").css('display', 'block');
 		});
 		$(window).resize(function(event) {
