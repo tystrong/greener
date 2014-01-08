@@ -138,7 +138,7 @@
     
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(function() {
            $('.ribbon').on('click', function() {
                var dataEl = $(this).children("h2").data('el');
                $('#question').hide();
@@ -162,6 +162,24 @@
                    top: '120px'
                });
            });
+        });
+        
+        $(function(){
+            var lastScroll = $(document).scrollTop();
+            $(window).scroll(function(e) {
+                var newScroll = $(document).scrollTop();
+                var scrolled = newScroll - lastScroll;
+                lastScroll = newScroll;
+                if(scrolled > 0 ){
+                    hideMenu();
+                    showClosed;
+
+                }
+               if(scrolled < 0 ){
+                    hideClosed();
+                    showMenu();
+                }
+            });
         });
 
         function hideMenu() {
