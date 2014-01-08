@@ -163,6 +163,24 @@
                });
            });
         });
+        
+        $(function(){
+            var lastScroll = $(document).scrollTop();
+            $(window).scroll(function(e) {
+                var newScroll = $(document).scrollTop();
+                scrolled = newScroll - lastScroll;
+                lastScroll = newScroll;
+
+                if(scrolled > 0) {
+                    hideMenu();
+                    showClosed();
+                }
+                if(scrolled < 0) {
+                    hideClosed();
+                    showMenu();
+                }
+            });
+        });
 
         function hideMenu() {
             document.getElementById("menu-container").style.top = "-50px";
