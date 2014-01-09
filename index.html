@@ -92,16 +92,14 @@
             <h2 data-el="geothermal"></h2>
         </div>
 <div class="images">
-        <img class='image' id="solar" data-el="solar" alt="" />
-        <img class='image' id="bio" data-el="biofuel" alt="" />
-        <img class='image' id="wind" data-el="wind"  alt="" />
-        <img class='image' id="geo" data-el="geothermal"  alt="" />
+        <img src="images/icon-solar.png" class='image' id="solar" data-el="solar" alt="" />
+        <img src="images/icon-biofuel.png" class='image' id="bio" data-el="biofuel" alt="" />
+        <img src="images/icon-wind.png" class='image' id="wind" data-el="wind"  alt="" />
+        <img src="images/icon-geothermal.png" class='image' id="geo" data-el="geothermal"  alt="" />
     </div>
         <div class="video">
-            <h2>Our Videos</h2>
+            <h2>Our Goal</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <iframe class="video1" width="380" height="285" src="http://www.youtube.com/embed/99ZYIECx1Vw" frameborder="0" allowfullscreen></iframe>
-            <iframe width="380" height="285" src="http://www.youtube.com/embed/99ZYIECx1Vw" frameborder="0" allowfullscreen></iframe>
             <a href="solutions.html">See More Videos &raquo;</a>
         </div>
     </div>
@@ -138,7 +136,7 @@
     
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(function() {
            $('.ribbon').on('click', function() {
                var dataEl = $(this).children("h2").data('el');
                $('#question').hide();
@@ -168,14 +166,14 @@
             var lastScroll = $(document).scrollTop();
             $(window).scroll(function(e) {
                 var newScroll = $(document).scrollTop();
-                scrolled = newScroll - lastScroll;
+                var scrolled = newScroll - lastScroll;
                 lastScroll = newScroll;
-
-                if(scrolled > 0) {
+                if(scrolled > 0 ){
                     hideMenu();
-                    showClosed();
+                    showClosed;
+
                 }
-                if(scrolled < 0) {
+               if(scrolled < 0 ){
                     hideClosed();
                     showMenu();
                 }

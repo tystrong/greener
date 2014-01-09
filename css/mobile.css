@@ -1,8 +1,6 @@
-html, body, a, ul {
+html, body, a {
   margin: 0;
-  padding: 0; }
-
-body {
+  padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 a {
@@ -16,11 +14,14 @@ li {
 #nav {
   width: 100%;
   position: absolute;
-  background-color: #A0D468;
+  background-color: #A0D468; }
+
+#nav > ul {
   margin: 0;
   height: 40px;
   color: white;
   display: block;
+  line-height: auto;
   text-align: center;
   list-style-type: none;
   vertical-align: middle; }
@@ -42,33 +43,9 @@ li {
   vertical-align: middle;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-.menu-item-container {
-  width: 100%;
-  margin-top: 0px;
-  margin-left: 0px;
-  overflow: visible;
-  height: auto; }
-
-.menu-item {
-  top: 0;
-  left: 0;
-  z-index: 5;
-  display: inline-block; }
-  .menu-item:hover, .menu-item:active {
-    background-color: #79AA56; }
-
-.wrapper {
-  margin: 0;
-  background: #333;
-  padding-top: 50px !important;
-  padding: 10px; }
-
 .content {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  min-height: 100%;
   position: relative;
+  margin: 0 auto;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px; }
 
@@ -76,35 +53,44 @@ li {
   p {
     margin: 0; }
 
-  .menu-item-container {
-    width: 100%;
-    margin-top: 40px;
-    margin-left: 0px;
-    display: none;
-    overflow: visible;
-    height: auto; }
+  .wrapper {
+    background: #333;
+    margin: 0;
+    padding: 10;
+    padding-top: 40px; }
 
   nav {
-    z-index: 1000;
+    z-index: 0;
     margin-bottom: 30px; }
 
   .menu-ico {
     display: block; }
-    .menu-ico:hover, .menu-ico:active {
-      background-color: #79AA56; }
+    .menu-ico:hover {
+      box-shadow: 1px 1px 3px 0 #344F17 inset; }
 
-  .menu-item {
-    top: 0;
-    left: 0;
+  .menu-ico:hover ~ .menu-item, .menu-ico:active ~ .menu-item {
+    display: block; }
+
+  li.menu-item {
+    text-align: center;
+    top: 40px;
     z-index: 5;
     display: none;
-    text-align: left;
+    margin-left: 10px;
+    position: relative;
     margin-left: -40px;
-    padding-left: 60px;
     background-color: #5B8B27; }
-    .menu-item:hover, .menu-item:active {
+    li.menu-item:hover {
       background-color: #79AA56; }
 
+  li.menu-item:nth-child(1) {
+    box-shadow: 0 1px 3px 0 #344F17 inset; }
+
   .content {
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important; } }
