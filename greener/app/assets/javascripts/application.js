@@ -15,20 +15,22 @@
 //= require turbolinks
 //= require_tree .
 
-function hideMenu() {
-    document.getElementById("menu-container").style.top = "-50px";
+function hideMenu(){
+    document.getElementById("menu-container").style.top="-50px";
+    window.setTimeout(showClosed(),0)
 }
 
-function showClosed() {
-    document.getElementById("closed-container").style.top = "0"
+function showClosed(){
+    document.getElementById("closed-container").style.top="0";
 }
 
-function hideClosed() {
-    document.getElementById("closed-container").style.top = "-50px";
+function hideClosed(){
+    document.getElementById("closed-container").style.top="-50px";
+    window.setTimeout(showMenu(),0)
 }
 
-function showMenu() {
-    document.getElementById("menu-container").style.top = "0"
+function showMenu(){
+    document.getElementById("menu-container").style.top="0";
 }
 $(function () {
     var e = $(document).scrollTop(),
